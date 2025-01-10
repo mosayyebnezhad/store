@@ -1,5 +1,6 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
+import Hell from './Componnent'
 
 const app = new Hono()
 
@@ -9,7 +10,7 @@ const app = new Hono()
 
 
 app.get("/", (c) => {
-  return c.text("hello")
+  return c.html(<Hell />)
 })
 
 const port = 3000
